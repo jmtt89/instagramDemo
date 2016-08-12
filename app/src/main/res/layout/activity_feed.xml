@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".FeedActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:showIn="@layout/activity_feed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:minHeight="120dp">
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/placeholder"
+                    android:layout_weight="0.5"
+                    android:scaleType="fitCenter"
+                    android:padding="8dp"
+                    android:contentDescription="Profile Image" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:weightSum="1"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="username"
+                        android:id="@+id/username"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="full_name"
+                        android:id="@+id/full_name"
+                        android:lines="1"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed cursus ligula. Donec quis rutrum ex. Vestibulum sodales dapibus ultrices. Aliquam mattis, elit et tempor suscipit, ligula lectus faucibus massa, ac vehicula mi dui eu lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce nulla dolor, dignissim quis auctor sit amet, dictum nec ligula. Mauris et volutpat diam. Cras et neque est. Cras elit nulla, congue nec libero eu, consectetur congue tellus. Integer tincidunt consequat nisi, non venenatis felis scelerisque vel. In hac habitasse platea dictumst. Aliquam vitae felis quis magna cursus lacinia et eu lectus. Quisque ante nulla, egestas a est at, lacinia fringilla neque. Curabitur metus nisi, aliquet euismod condimentum et, pellentesque et erat.  Praesent euismod quam id tortor posuere sodales. Cras porttitor blandit volutpat. Nulla aliquam metus non lectus ultrices aliquet. Ut et diam tellus. Duis auctor erat vel mauris porta, et tempor nisi accumsan. Donec porttitor varius lectus, id maximus quam aliquam vitae. Morbi et nisi erat. Vestibulum at nunc non eros cursus condimentum a at magna. Mauris a pharetra eros, eget blandit felis. Proin nibh arcu, ultrices vel imperdiet a, scelerisque sit amet massa. Proin consequat nibh nec elit rutrum mattis eu ac felis."
+                        android:id="@+id/bio"
+                        android:maxLines="5" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_search_white_24dp" />
+
+</android.support.design.widget.CoordinatorLayout>
